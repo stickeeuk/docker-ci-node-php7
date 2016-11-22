@@ -22,12 +22,17 @@ RUN apt-get install -y \
     unzip \
     libfontconfig
 
-# Install node tools
+# Install Python and its headers (used by node-gyp and awscli)
+RUN apt-get install -y \
+    python2.7 \
+    python-dev
+
+# Install Node tools
 RUN npm install -g \
     node-gyp \
     yarn
 
-# Install php 7 and its modules
+# Install PHP 7 and its modules
 RUN apt-get install -y \
     php7.0 \
     php7.0-mbstring \
@@ -45,6 +50,13 @@ RUN apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN chmod a+x /usr/local/bin/composer
 RUN composer selfupdate
+
+# Install pip
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+RUN python get-pip.py
+
+# Install AWS CLI
+RUN pip install awscli --ignore-installed six
 
 # Clean up temporary files
 RUN apt-get clean && apt-get autoclean && apt-get --purge -y autoremove && \
