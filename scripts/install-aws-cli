@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -xe
+
+# Install AWS CLI
+pip install awscli --ignore-installed six

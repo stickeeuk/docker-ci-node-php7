@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -xe
+
+# Install essential tools
+apt-get install -y \
+    curl \
+    git \
+    zip \
+    unzip \
+    libfontconfig

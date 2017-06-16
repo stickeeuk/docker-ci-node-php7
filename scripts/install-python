@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -xe
+
+# Install Python and its headers (used by node-gyp and awscli)
+apt-get install -y \
+    python2.7 \
+    python-dev

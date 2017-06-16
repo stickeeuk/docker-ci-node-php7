@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -xe
+
+# Add basic repository
+echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+wget -O- "http://www.dotdeb.org/dotdeb.gpg" | apt-key add -
+apt-get update -q
+apt-get upgrade -y
