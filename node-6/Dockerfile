@@ -5,6 +5,7 @@ MAINTAINER Grzegorz Rajchman <mrliptontea@griego.pl>
 ENV DEBIAN_FRONTEND noninteractive
 ENV COMPOSER_NO_INTERACTION 1
 ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_DISABLE_XDEBUG_WARN 1
 
 # Tell npm to display only warnings and errors
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -36,16 +37,18 @@ RUN npm install -g \
 # Install PHP 7 and its modules
 RUN apt-get install -y \
     php7.0 \
+    php7.0-bz2 \
+    php7.0-curl \
+    php7.0-gd \
+    php7.0-imagick \
+    php7.0-json \
     php7.0-mbstring \
     php7.0-mcrypt \
-    php7.0-curl \
-    php7.0-json \
+    php7.0-mysql \
+    php7.0-sqlite3 \
     php7.0-xml \
     php7.0-zip \
-    php7.0-bz2 \
-    php7.0-sqlite3 \
-    php7.0-mysql \
-    php7.0-gd
+    php7.0-xdebug
 
 # Install composer
 RUN curl -sS "https://getcomposer.org/installer" | php -- --install-dir=/usr/local/bin --filename=composer
