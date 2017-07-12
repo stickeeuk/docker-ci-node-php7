@@ -15,10 +15,17 @@ ENV COMPOSER_DISABLE_XDEBUG_WARN 1
 ADD / /
 RUN /scripts/add-jessie-sury-repo
 RUN /scripts/install-essentials
-RUN /scripts/install-php7
+RUN /scripts/install-python
+RUN /scripts/install-pip
+RUN /scripts/install-aws-cli
+RUN /scripts/install-node-tools
+RUN /scripts/install-php71
 RUN /scripts/install-composer
 RUN /scripts/cleanup
 
 # Show versions
+RUN node --version
+RUN npm --version
+RUN yarn --version
 RUN php --version
 RUN composer --version
