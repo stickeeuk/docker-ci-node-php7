@@ -1,5 +1,5 @@
-FROM node:6
-MAINTAINER Martin Meredith
+FROM node:8
+MAINTAINER Martin Meredith <martin.meredith@stickee.co.uk>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
