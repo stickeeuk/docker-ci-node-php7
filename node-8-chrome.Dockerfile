@@ -13,7 +13,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_DISABLE_XDEBUG_WARN 1
 
 ADD / /
-RUN /scripts/add-jessie-repo
+RUN /scripts/add-jessie-dotdeb-repo
 RUN /scripts/install-essentials
 RUN /scripts/install-python
 RUN /scripts/install-pip
