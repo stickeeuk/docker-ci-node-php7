@@ -31,3 +31,6 @@ RUN yarn --version
 RUN php --version
 RUN composer --version
 RUN google-chrome --version
+
+# List PHP modules
+RUN php -m
