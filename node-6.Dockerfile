@@ -1,5 +1,5 @@
 FROM node:6
-MAINTAINER Grzegorz Rajchman <mrliptontea@griego.pl>
+MAINTAINER Grzegorz Rajchman <grzegorz.rajchman@stickee.co.uk>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
