@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:6
 MAINTAINER Grzegorz Rajchman <grzegorz.rajchman@stickee.co.uk>
 
 # Let the container know that there is no tty
@@ -19,8 +19,9 @@ RUN /scripts/install-python
 RUN /scripts/install-pip
 RUN /scripts/install-aws-cli
 RUN /scripts/install-node-tools
-RUN /scripts/install-php7
+RUN /scripts/install-php5
 RUN /scripts/install-composer
+RUN /scripts/install-chrome
 RUN /scripts/cleanup
 
 # Show versions

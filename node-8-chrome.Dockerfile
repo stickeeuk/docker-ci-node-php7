@@ -1,5 +1,5 @@
 FROM node:8
-MAINTAINER Grzegorz Rajchman <mrliptontea@griego.pl>
+MAINTAINER Grzegorz Rajchman <grzegorz.rajchman@stickee.co.uk>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
@@ -31,3 +31,6 @@ RUN yarn --version
 RUN php --version
 RUN composer --version
 RUN google-chrome --version
+
+# List PHP modules
+RUN php -m

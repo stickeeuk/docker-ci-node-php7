@@ -29,3 +29,6 @@ RUN npm --version
 RUN yarn --version
 RUN php --version
 RUN composer --version
+
+# List PHP modules
+RUN php -m
