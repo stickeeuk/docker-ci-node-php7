@@ -1,6 +1,6 @@
 # Docker CI builds image with [Node], [PHP] and [Composer]
 
-This Docker image is based on the official node image which uses Debian Jessie distro.
+This Docker image is based on the official node image which uses Debian Jessie.
 
 It is intended for running Continuous Integration and deployment builds for PHP applications with Node dependencies for compiling static assets. It also features [AWS cli] for interacting with AWS Services.
 

@@ -10,19 +10,17 @@ wget -O- "https://packages.sury.org/php/apt.gpg" | apt-key add -
 # Install PHP 7 and its modules
 apt-get update -q
 apt-get install -y \
-    php7.0-fpm \
-    php7.0-bz2 \
-    php7.0-curl \
-    php7.0-gd \
-    php7.0-imagick \
-    php7.0-json \
-    php7.0-mbstring \
-    php7.0-mcrypt \
-    php7.0-mysql \
-    php7.0-sqlite3 \
-    php7.0-xml \
-    php7.0-zip \
-    php7.0-xdebug
+    php7.2-fpm \
+    php7.2-bz2 \
+    php7.2-curl \
+    php7.2-gd \
+    php7.2-imagick \
+    php7.2-json \
+    php7.2-mbstring \
+    php7.2-mysql \
+    php7.2-sqlite3 \
+    php7.2-xml \
+    php7.2-zip
 
 rm /etc/apt/sources.list.d/php.list
 sh /scripts/cleanup
