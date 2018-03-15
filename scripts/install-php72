@@ -20,7 +20,8 @@ apt-get install -y \
     php7.2-mysql \
     php7.2-sqlite3 \
     php7.2-xml \
-    php7.2-zip
+    php7.2-zip \
+    php7.2-xdebug
 
 rm /etc/apt/sources.list.d/php.list
 sh /scripts/cleanup
